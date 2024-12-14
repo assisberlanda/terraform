@@ -23,5 +23,5 @@ resource "azurerm_storage_container" "container" {
   for_each = azurerm_storage_account.storage_account
 
   name                 = "imagens-${each.key}"
-  storage_account_name = each.value.name
+  storage_account_id = each.value.id
 }
